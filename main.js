@@ -62,16 +62,22 @@ function getEvens(array) {
 
 console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEvens should return "12,4,18,6"'});
 
-
 // 5.
 // Write a function that accepts an array argument
 // and returns the array reversed
 // Hint: When looping over the array, start at the last index
 // and decrement the iterator to zero
 // A:
+function arrayReverser(array) {
+  var reversedArray = [];
+  for (var i = (array.length - 1); i > -1; i--){
+    reversedArray.push(array[i]);
+  } return reversedArray;
+}
 
 
 console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1', {'message': 'arrayReverser should return "6,5,101,3,11,7,9,18,4,12,1"'});
+
 var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 
 
@@ -79,6 +85,12 @@ var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 // Write a function that accepts an array argument
 // and returns the sum of all of the numbers in the array
 // A:
+function sumArrayOfNumbers(array) {
+  var sum = 0;
+  for (var i = 0; i < array.length; i++){
+    sum = array[i] + sum;
+  } return sum;
+}
 
 
 console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumbers should return 177'});
@@ -88,6 +100,9 @@ console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumber
 // Write a function that accepts an array argument
 // and returns an array of only the numbers greater than 10
 // A:
+function numbersOver10(array) {
+  
+}
 
 
 console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message': 'numbersOver10 should return "12,18,11,101"'});
