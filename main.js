@@ -129,6 +129,7 @@ function numbersOverX(array, numberX) {
 
 console.assert(numbersOverX(numbers, 15).toString() === "18,101", {'message': 'numbersOverX should return "18,101"'});
 
+
 // 9.
 // Write a function `joinArrays()` that takes an array of arrays,
 // and returns a single array with the contents of the second array
@@ -137,10 +138,10 @@ var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 var numbersTwo = [33,56,72,2,5,66,90,21,42];
 // A:
 function joinArrays(array) {
-  for (var i = 0; i < arrayTwo.length; i++){
-    arrayOne.push(arrayTwo[i]);
-  }
-  return arrayOne;
+  var newArray = array[0];
+  for (var i = 0; i < array[1].length; i++){
+    newArray.push(array[1][i]);
+  } return newArray;
 }
 
 
@@ -161,13 +162,13 @@ var instructors = [
 ];
 
 var instructorNameDiscipline = instructors[5];
-// greenvIlleInstructor = <your answer>
+// instructorNameDiscipline = ["Will", "JavaScript"];
 
 var instructorOne = instructors[4][0];
-// instructorOne = <your answer>
+// instructorOne = "Dan";
 
 var instructorTwo = instructors[0][1];
-// instructorTwo = <your answer>
+// instructorTwo = "JavaScript";
 
 var instructorThree = instructors[2][0];
-// instructorThree = <your answer>
+// instructorThree = "Brit";
