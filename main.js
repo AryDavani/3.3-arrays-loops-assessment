@@ -101,7 +101,12 @@ console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumber
 // and returns an array of only the numbers greater than 10
 // A:
 function numbersOver10(array) {
-  
+  var overTen = [];
+  for (var i = 0; i < array.length; i++){
+    if (array[i] > 10){
+      overTen.push(array[i]);
+    }
+  } return overTen;
 }
 
 
@@ -112,6 +117,14 @@ console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message':
 // Write a function that accepts both an array and number argument
 // and returns an array of only the numbers greater than the number passed to the function
 // A:
+function numbersOverX(array, numberX) {
+  var newArrayOverNumberX = [];
+  for (var i = 0; i < array.length; i++){
+    if (array[i] > numberX){
+      newArrayOverNumberX.push(array[i]);
+    }
+  } return newArrayOverNumberX;
+}
 
 
 console.assert(numbersOverX(numbers, 15).toString() === "18,101", {'message': 'numbersOverX should return "18,101"'});
@@ -123,6 +136,12 @@ console.assert(numbersOverX(numbers, 15).toString() === "18,101", {'message': 'n
 var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 var numbersTwo = [33,56,72,2,5,66,90,21,42];
 // A:
+function joinArrays(array) {
+  for (var i = 0; i < arrayTwo.length; i++){
+    arrayOne.push(arrayTwo[i]);
+  }
+  return arrayOne;
+}
 
 
 console.assert(joinArrays([numbers, numbersTwo]).toString() === '1,12,4,18,9,7,11,3,101,5,6,33,56,72,2,5,66,90,21,42', {'message': 'joinArrays should return "1,12,4,18,9,7,11,3,101,5,6,33,56,72,2,5,66,90,21,42"'});
